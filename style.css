@@ -1,0 +1,149 @@
+:root {
+    --white: rgb(255,255,255);
+    --smoteWhite: rgb(239,241,250);
+    --black: rgb(22,25,50);
+    --smoteBlack: rgb(30,33,63);
+    --lightGray: rgb(215,224,255);
+    --purple: rgb(216,129,248);
+    --turquoise : rgb(122,243,248);
+    --red : rgb(248,112,112);
+    --fontFamilyKumbh: 'Kumbh Sans', sans-serif;
+    --fontFamilyRoboto: 'Roboto Slab', serif;
+    --fontFamilySpace: 'Space Mono', monospace;
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--smoteBlack);
+    color: var(--lightGray);
+    font-family: var(--fontFamilyKumbh);
+}
+p {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--lightGray);
+    font-weight: bold;
+}
+.p-small {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(99, 105, 132);
+}
+h1 {
+    font-size: 100px;
+    line-height: 120px;
+    font-weight: bold;
+    letter-spacing: -5px;
+}
+h2 {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+h3 {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+h4 {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+/*************
+header
+*************/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 374px;
+    height: 64px;
+    border-radius: 32px;
+    background: var(--black);
+    padding: 10px;
+}
+.top {
+    width: 120px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+.top.active {
+    background: var(--red);
+}
+.top.active p {
+    color: var(--smoteBlack);
+}
+/*************
+main
+*************/
+main {
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--black) 0%, var(--black) 15%, rgb(42, 46, 85) 100%);
+    box-shadow: -30px -30px 90px -30px rgb(42, 46, 85);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.central {
+    width: 366px;
+    height: 366px;
+    border-radius: 50%;
+    background: var(--black);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.border {
+    position: absolute;
+}
+.progress {
+    bottom: -100px;
+    position: relative;
+    stroke-width: 10;
+    stroke: var(--red);
+    stroke-linecap: round;
+    fill: none;
+    transform: rotate(270deg);
+    transform-origin: center;
+}
+.main-time {
+    display: flex;
+    margin-bottom: 25px;
+}
+.start-pause {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+/*************
+settings
+*************/
