@@ -65,7 +65,7 @@
                 <div class="inputs">
                     <div class="input-pomodoro">
                         <p class="p-small">pomodoro</p>
-                        <input type="number" class="input1" value="25">
+                        <input type="number" class="input1" value="25" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                         <div class="arrows-div">
                             <div class="arrows">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow-scg arrow-up" width="14" height="7"><path class="arrow-scg arrow-up" fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="input-short-break">
                         <p class="p-small">short break</p>
-                        <input type="number" class="input2" value="5">
+                        <input type="number" class="input2" value="5" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                         <div class="arrows-div">
                             <div class="arrows">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow-scg arrow-up" width="14" height="7"><path class="arrow-scg arrow-up" fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="input-long-break">
                         <p class="p-small">long break</p>
-                        <input type="number" class="input3" value="15">
+                        <input type="number" class="input3" value="15" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                         <div class="arrows-div">
                             <div class="arrows">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow-scg arrow-up" width="14" height="7"><path class="arrow-scg arrow-up" fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
@@ -99,7 +99,7 @@
                 <div class="font">  
                     <h3>font</h3>
                     <div class="font-right-side">
-                        <h5 class="kumbh">Aa</h5>
+                        <h5 class="kumbh active">Aa</h5>
                         <h5 class="roboto">Aa</h5>
                         <h5 class="space">Aa</h5>
                     </div>

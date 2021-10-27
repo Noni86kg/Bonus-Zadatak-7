@@ -111,6 +111,10 @@ topBtns.forEach((topBtn) => {
 const settingsBtn = document.querySelector('.settings')
 const arrows = document.querySelectorAll('.arrows svg')
 const colorBtns = document.querySelectorAll('.color-btn')
+const kumbh = document.querySelector('.kumbh')
+const roboto = document.querySelector('.roboto')
+const space = document.querySelector('.space')
+const colorIcons = document.querySelectorAll('.font-right-side h5')
 const closeBtn = document.querySelector('.close-btn')
 const button = document.querySelector('button')
 const input1 = document.querySelector('.input1')
@@ -131,16 +135,22 @@ function dataIdTopCalc() {
 // button
 button.addEventListener('click', () => {
     timeMinSaveArr = [input1.value, input2.value, input3.value]
+    colorIcons.forEach((colorIcon) => {
+        colorIcon.classList.remove('active')
+    })
     colorBtns.forEach((colorBtn) => {
         if (colorBtn.classList.contains('active') && colorBtn.classList.contains('red')) {
             document.documentElement.style.setProperty('--red','rgb(248,112,112)')
             body.style.fontFamily = 'var(--fontFamilyKumbh)'
+            kumbh.classList.add('active')
         } else if (colorBtn.classList.contains('active') && colorBtn.classList.contains('turquoise')) {
             document.documentElement.style.setProperty('--red','rgb(122,243,248)')
             body.style.fontFamily = 'var(--fontFamilyRoboto)'
+            roboto.classList.add('active')
         } else if (colorBtn.classList.contains('active') && colorBtn.classList.contains('purple')) {
             document.documentElement.style.setProperty('--red','rgb(216,129,248)')
             body.style.fontFamily = 'var(--fontFamilySpace)'
+            space.classList.add('active')
         }
     })
     clearSwitch()
@@ -177,11 +187,21 @@ document.addEventListener('keydown', function (e) {
 // change color btn active
 colorBtns.forEach((colorBtn) => {
     colorBtn.addEventListener('click', (e) => {
+        colorIcons.forEach((colorIcon) => {
+            colorIcon.classList.remove('active')
+        })
         colorBtns.forEach((btn) => {
             btn.classList.remove('active')
         })
         const cliced = e.target.closest('.color-btn')
         cliced.classList.add('active')
+        if (cliced.classList.contains('red')) {
+            kumbh.classList.add('active')
+        } else if (cliced.classList.contains('turquoise')) {
+            roboto.classList.add('active')
+        } else if (cliced.classList.contains('purple')) {
+            space.classList.add('active')
+        }
     })
 })
 
