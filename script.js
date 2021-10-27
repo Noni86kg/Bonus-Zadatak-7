@@ -143,19 +143,15 @@ button.addEventListener('click', () => {
             body.style.fontFamily = 'var(--fontFamilySpace)'
         }
     })
+    clearSwitch()
+    progressCircle.style.strokeDashoffset = progressCircle.style.strokeDasharray
     dataIdTopCalc()
     timeMin.innerText = timeMinSaveArr[dataIdTop]
-    timeSec.innerText = "00"
     closeModal()
 })
 
 // open modal
 settingsBtn.addEventListener('click', () => {
-    clearInterval(runTime)
-    clearInterval(runCircle)
-    dataIdTopCalc()
-    timeMin.innerText = timeMinSaveArr[dataIdTop]
-    timeSec.innerText = "00"
     modal.classList.remove('hidden')
     overlay.classList.remove('hidden')
 })
